@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Exercise1{
 	
-	private static void SumOfCube(int n) {
+	private static void sumOfCube(int n) {
 		int sum=0,temp;
 		while(n!=0)
 		{
@@ -18,7 +18,7 @@ public class Exercise1{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number : ");
 		int num = sc.nextInt();
-		SumOfCube(num);
+		sumOfCube(num);
 		sc.close();
 	}
 
