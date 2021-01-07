@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Exercise2 {
 
-	private static void Signal( String n)
+	private static void signal( String n)
 	{
 		if(n.equalsIgnoreCase("red"))
 			System.out.println("stop");
@@ -22,7 +22,7 @@ public class Exercise2 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter The Code : ");
 		String code = sc.next();
-		Signal(code);
+		signal(code);
 		sc.close();
 	}
 }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Exercise4 {
 
-	private static void Prime(int number)
+	private static void prime(int number)
 	{
 		int flag =0;
 		if(number==2)
@@ -25,7 +25,7 @@ public class Exercise4 {
 		int num = sc.nextInt();
 		for (int i =2;i<=num;i++)
 		{
-			Prime(i);
+			prime(i);
 		}
 		sc.close();
 
