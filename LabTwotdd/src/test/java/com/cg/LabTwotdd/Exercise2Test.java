@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class Exercise2Test {
 	Exercise2 object = new Exercise2();
-	String [] input = {"coffee","tea","latte","americano","coldcoffee"};
+	String [] input = {"coffee","tea","latte","americano"};
 
 	@Test
 	public void TestSortStrings_GivenNoInput_ShouldReturnNoInputException() {
@@ -38,7 +38,16 @@ public class Exercise2Test {
 	}
 	}
 
-	
+	@Test
+	public void TestSortStrings_GivenAnyNumberOfStringAsInput_ShouldReturnHalfStringsInUpperCaseAndOtherInLowerCase()
+	{
+	try {
+	String [] result =object.sortStrings(input);
+	String[] expected = {"AMERICANO", "COFFEE", "LATTE", "tea"};
+	assertArrayEquals(expected, result);
+	} catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+
 }
-
-

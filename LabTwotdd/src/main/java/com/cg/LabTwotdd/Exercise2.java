@@ -12,43 +12,51 @@ import java.util.Arrays;
 public class Exercise2 {
 	
 	
-	public String[] sortStrings(String[] string) throws Exception {
-		int length = string.length;
+	public static String[] sortStrings(String[] str) throws Exception {
+		
+		int length = str.length;
 		String result[] = new String[length];
 
 		if(length==0)
 		{
 		throw new Exception("NoInputException");
 		}
-
-		else if(length==1)
+		if(length==1)
 		{
-		result[0]=string[0].toUpperCase();
+			
+		result[0]=str[0].toUpperCase();
+		
+		System.out.println(result[0]);
+		
 		return result;
 		}
 
-		else
+		if(length>1)
 		{
-		Arrays.sort(string);
+			
+		Arrays.sort(str);
+		
 		for(int i =0;i<length ; i++)
 		{
-		if(length%2==0)
+		if(length%2==0 && i<length/2)
 		{
-		if(i<length/2)
-		{
-		result[i]=string[i].toUpperCase();
-		   }
+			
+		result[i]=str[i].toUpperCase();
+		
+		
+		}
 		   else
-		result[i]=string[i].toLowerCase();
-		       }
-		else
+		   {
+		result[i]=str[i].toLowerCase();
+		       }		
+		
+		
+		if(i<(length/2)+1)
 		{
-		if(i<length/2+1)
-		{
-		result[i]=string[i].toUpperCase();
+		result[i]=str[i].toUpperCase();
 		}
 		else
-		result[i]=string[i].toLowerCase();
+		result[i]=str[i].toLowerCase();
 		}
 		}
 
@@ -57,4 +65,3 @@ public class Exercise2 {
 		}
 
 		}
-}
